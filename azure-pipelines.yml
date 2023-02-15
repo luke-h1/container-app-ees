@@ -37,13 +37,6 @@ jobs:
           script: 'pnpm i'
 
       - task: 'Bash@3'
-        displayName: 'echo "done'
-        inputs:
-          workingDir: '.'
-          targetType: 'inline'
-          script: 'echo "done"'
-
-      - task: 'Bash@3'
         displayName: 'Purge'
         inputs:
           workingDir: '.'
@@ -64,3 +57,7 @@ jobs:
         inputs:
           artifactName: 'public-frontend'
           targetPath: '$(Build.ArtifactStagingDirectory)'
+    
+      # move docker build + push here
+      # TODO: dont use latest tag - use build number used in footer
+      # see if pwd auto-generated / set

@@ -68,6 +68,7 @@
         "description": "The URL of the Docker registry."
       }
     },
+    // need these variables
     "DOCKER_REGISTRY_SERVER_USERNAME": {
       "type": "string",
       "defaultValue": "",
@@ -124,8 +125,8 @@
           "alwaysOn": true,
           "minTlsVersion": "1.2",
           "ftpsState": "FtpsOnly",
-          "netFrameworkVersion": "v6.0",
-          "framework": "node",
+          "netFrameworkVersion": "v6.0", // get rid
+          "framework": "node", // get rid
           "nodeVersion": "16-lts",
           "WEBSITES_PORT": 3000,
           "DOCKER_REGISTRY_SERVER_URL": "[parameters('DOCKER_REGISTER_SERVER_URL')]",

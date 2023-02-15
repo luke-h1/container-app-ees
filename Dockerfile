@@ -1,10 +1,9 @@
 FROM node:16.14.2-alpine AS builder
 
 WORKDIR /app
-
 COPY . .
 
-RUN rm -rf src/GovUk.*
+# RUN rm -rf src/GovUk.*
 
 RUN corepack enable
 
@@ -34,3 +33,9 @@ EXPOSE 3000
 
 USER node
 CMD [ "pnpm", "start" ]
+# Dockerfile-public-frontend
+# change dockerignore to reflect naming
+# remove rm -rf stuff as it's ignored
+# maybe in new docker dir
+# will need to change build context (keep as root of repo) - starting point of docker image
+# change dockerfile to reflect naming
